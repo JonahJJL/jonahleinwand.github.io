@@ -63,7 +63,7 @@ export default function AppRouter() {
                 </p>
               </div>
               <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
-                <img src="/src/assets/JL_square.jpg" alt="Profile" style={{ width: 320, height: 320, borderRadius: 24, margin: '32px 0', boxShadow: '0 8px 32px 0 #b0c4de55', objectFit: 'cover', background: '#e0eafc' }} />
+                <img src="/JL_square.jpg" alt="Profile" style={{ width: 320, height: 320, borderRadius: 24, margin: '32px 0', boxShadow: '0 8px 32px 0 #b0c4de55', objectFit: 'cover', background: '#e0eafc' }} />
               </div>
             </main>
           } />
