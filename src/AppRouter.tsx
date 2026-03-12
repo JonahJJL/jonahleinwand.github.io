@@ -47,19 +47,24 @@ export default function AppRouter() {
             <main style={{
               minHeight: '60vh',
               display: 'flex',
-              flexDirection: 'column',
+              flexDirection: 'row',
               alignItems: 'center',
               justifyContent: 'center',
               fontFamily: 'Poppins, Segoe UI, Arial, sans-serif',
               color: '#1a2540',
-              marginTop: 32
+              marginTop: 32,
+              gap: 48
             }}>
-              <h1 style={{ fontSize: 54, fontWeight: 800, letterSpacing: 2, marginBottom: 12, color: '#1a2540', textShadow: '0 2px 16px #b0c4de55' }}>Jonah Leinwand</h1>
-              <p style={{ fontSize: 22, marginBottom: 32, color: '#3b4a5a' }}>Welcome to my biomedical and spine-themed personal website!</p>
-              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Spine" style={{ width: 320, borderRadius: 24, margin: '32px 0', boxShadow: '0 8px 32px 0 #b0c4de55' }} />
-              <p style={{ maxWidth: 700, textAlign: 'center', fontSize: 20, color: '#2d3a4b', marginTop: 24 }}>
-                Explore the About, Projects, and Contact pages to learn more about biomedical research and spine innovation.
-              </p>
+              <div style={{ flex: 1, textAlign: 'left', maxWidth: 500 }}>
+                <h1 style={{ fontSize: 54, fontWeight: 800, letterSpacing: 2, marginBottom: 12, color: '#1a2540', textShadow: '0 2px 16px #b0c4de55' }}>Jonah Leinwand</h1>
+                <p style={{ fontSize: 22, marginBottom: 32, color: '#3b4a5a' }}>Welcome to my biomedical and spine-themed personal website!</p>
+                <p style={{ maxWidth: 700, fontSize: 20, color: '#2d3a4b', marginTop: 24 }}>
+                  Explore the About, Projects, and Contact pages to learn more about biomedical research and spine innovation.
+                </p>
+              </div>
+              <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+                <img src="/src/assets/JL_square.jpg" alt="Profile" style={{ width: 320, height: 320, borderRadius: 24, margin: '32px 0', boxShadow: '0 8px 32px 0 #b0c4de55', objectFit: 'cover', background: '#e0eafc' }} />
+              </div>
             </main>
           } />
         </Routes>
