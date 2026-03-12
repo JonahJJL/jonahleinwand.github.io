@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
-import profileImg from './assets/JL_square.jpg';
+import profileImg from './assets/Newpicture.jpg';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
