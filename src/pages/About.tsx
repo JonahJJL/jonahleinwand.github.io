@@ -72,7 +72,7 @@ export default function About() {
       flexDirection: 'row',
       alignItems: 'flex-start',
       justifyContent: 'center',
-      minHeight: 500,
+      height: 500,
       background: 'rgba(255,255,255,0.92)',
       boxShadow: '0 8px 32px 0 #b0c4de33',
       borderRadius: 24,
@@ -93,7 +93,7 @@ export default function About() {
           </button>
         ))}
       </div>
-      <div style={{ flex: 1, padding: '48px 32px 48px 0', minWidth: 0 }}>
+      <div style={{ flex: 1, padding: '48px 32px 48px 64px', minWidth: 0 }}>
         <div className="fade-in">
           {sections.find((s) => s.key === active)?.content}
         </div>
