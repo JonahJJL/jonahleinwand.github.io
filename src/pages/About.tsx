@@ -96,19 +96,7 @@ const sections = [
 export default function About() {
   const [active, setActive] = useState('education');
   return (
-    <main style={{
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'stretch',
-      background: 'rgba(255,255,255,0.92)',
-      boxShadow: '0 8px 32px 0 #b0c4de33',
-      borderRadius: 24,
-      margin: '32px auto 32px auto',
-      padding: 0,
-      maxWidth: 1000,
-      minHeight: 420,
-      overflow: 'hidden',
-    }}>
+    <main className="about-main">
       <div className="sidebar-buttons-container">
         {sections.map((s) => (
           <button
@@ -120,7 +108,7 @@ export default function About() {
           </button>
         ))}
       </div>
-      <div style={{ flex: 1, padding: '40px 40px 40px 48px', minWidth: 0, overflowY: 'auto' }}>
+      <div className="about-content">
         <div className="fade-in" key={active}>
           {sections.find((s) => s.key === active)?.content}
         </div>

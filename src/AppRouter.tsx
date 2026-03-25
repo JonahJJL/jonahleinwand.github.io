@@ -13,20 +13,7 @@ function AppContent() {
   return (
     <>
       {!isHome && (
-        <header style={{
-          position: 'fixed',
-          top: 0, left: 0,
-          width: '100%',
-          background: 'rgba(255,255,255,0.7)',
-          backdropFilter: 'blur(12px)',
-          borderBottom: '1.5px solid #b0c4de',
-          boxShadow: '0 4px 24px 0 rgba(44,62,80,0.07)',
-          zIndex: 1000,
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          minHeight: 70,
-        }}>
+        <header className="site-header">
           <nav className="top-nav">
             <NavLink to="/"         end className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Home</NavLink>
             <NavLink to="/about"        className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>About</NavLink>

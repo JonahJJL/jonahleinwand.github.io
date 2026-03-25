@@ -343,35 +343,41 @@ export default function Home() {
 
       {/* ── Right: profile panel ── */}
       <div className="home-profile-panel">
-        <h1 className="home-title">Jonah Leinwand</h1>
 
-        <img
-          src={profileImg}
-          alt="Jonah Leinwand"
-          className="home-profile-img"
-        />
+        {/* Title + image: never animates or moves */}
+        <div className="home-profile-static">
+          <h1 className="home-title">Jonah Leinwand</h1>
+          <img
+            src={profileImg}
+            alt="Jonah Leinwand"
+            className="home-profile-img"
+          />
+        </div>
 
-        <div className="fade-in" key={hov ?? 'bio'} style={{ maxWidth: 360, textAlign: 'center' }}>
-          {hovNav ? (
-            <div
-              onClick={() => hovNav.route && navigate(hovNav.route!)}
-              style={{ cursor: 'pointer' }}
-            >
-              <h3 style={{ margin: '0 0 10px', fontSize: 22, color: '#1a2540' }}>
-                {hovNav.label}
-              </h3>
-              <p style={{ margin: '0 0 12px', fontSize: 15, color: '#5a6a7a', lineHeight: 1.6 }}>
-                {hovNav.desc}
+        {/* Description: only this part fades/changes on hover */}
+        <div className="home-profile-desc">
+          <div className="fade-in" key={hov ?? 'bio'}>
+            {hovNav ? (
+              <div
+                onClick={() => hovNav.route && navigate(hovNav.route!)}
+                style={{ cursor: 'pointer' }}
+              >
+                <h3 style={{ margin: '0 0 10px', fontSize: 22, color: '#1a2540' }}>
+                  {hovNav.label}
+                </h3>
+                <p style={{ margin: '0 0 12px', fontSize: 15, color: '#5a6a7a', lineHeight: 1.6 }}>
+                  {hovNav.desc}
+                </p>
+                <p style={{ margin: 0, fontSize: 13, color: '#2d68ae', fontWeight: 700 }}>
+                  Click to visit →
+                </p>
+              </div>
+            ) : (
+              <p style={{ margin: 0, fontSize: 15, color: '#3b4a5a', lineHeight: 1.7 }}>
+                {BIO}
               </p>
-              <p style={{ margin: 0, fontSize: 13, color: '#2d68ae', fontWeight: 700 }}>
-                Click to visit →
-              </p>
-            </div>
-          ) : (
-            <p style={{ margin: 0, fontSize: 15, color: '#3b4a5a', lineHeight: 1.7 }}>
-              {BIO}
-            </p>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </div>
