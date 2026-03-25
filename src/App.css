@@ -260,6 +260,8 @@ img {
   padding: 40px 40px 40px 48px;
   min-width: 0;
   overflow-y: auto;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* ── Home page layout ─────────────────────────────────────────────────────── */
