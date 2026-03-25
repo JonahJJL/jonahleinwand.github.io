@@ -276,21 +276,14 @@ export default function Home() {
   const DBX = [0, 1, 2].map(i => (BXS[i] + BXS[i + 1]) / 2);
 
   return (
-    <div style={{
-      height: '100vh',
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'center',
-      padding: '20px 32px 20px 16px',
-      boxSizing: 'border-box',
-    }}>
+    <div className="home-container">
 
       {/* ── Left: spine SVG ── */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', flexShrink: 0 }}>
+      <div className="home-spine-panel">
         <svg
           viewBox={`0 0 ${VW} ${SVG_H}`}
           preserveAspectRatio="xMidYMid meet"
-          style={{ height: 'calc(100vh - 40px)', width: 'auto', overflow: 'visible', display: 'block' }}
+          className="home-spine-svg"
         >
           {/* Anterior longitudinal ligament — follows lordotic curve */}
           <path
@@ -349,37 +342,13 @@ export default function Home() {
       </div>
 
       {/* ── Right: profile panel ── */}
-      <div style={{
-        flex: 1,
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '0 16px 0 24px',
-        gap: 20,
-        minWidth: 0,
-      }}>
-        <h1 style={{
-          fontSize: 38, fontWeight: 900, color: '#0f2236',
-          margin: 0, letterSpacing: 1,
-          fontFamily: 'Poppins, sans-serif',
-          textAlign: 'center',
-        }}>
-          Jonah Leinwand
-        </h1>
+      <div className="home-profile-panel">
+        <h1 className="home-title">Jonah Leinwand</h1>
 
         <img
           src={profileImg}
           alt="Jonah Leinwand"
-          style={{
-            width: '100%',
-            maxWidth: 360,
-            maxHeight: 280,
-            borderRadius: 18,
-            objectFit: 'cover',
-            boxShadow: '0 12px 40px rgba(16,32,64,0.15)',
-            display: 'block',
-          }}
+          className="home-profile-img"
         />
 
         <div className="fade-in" key={hov ?? 'bio'} style={{ maxWidth: 360, textAlign: 'center' }}>
