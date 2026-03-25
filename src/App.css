@@ -111,19 +111,17 @@ img {
 
 /* Sidebar buttons for About page */
 .sidebar-buttons-container {
-  background: linear-gradient(135deg, rgba(230,240,255,0.5), rgba(223,238,250,0.5));
-  border: 2px solid #b0c4de;
-  border-radius: 18px;
-  padding: 32px 24px;
+  background: linear-gradient(135deg, rgba(224,236,255,0.7), rgba(213,232,248,0.7));
+  border-right: 2px solid #b0c4de;
+  border-radius: 24px 0 0 24px;
+  padding: 36px 20px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
   align-items: center;
-  min-width: 190px;
-  position: absolute;
-  left: -330px;
-  top: 0;
-  height: fit-content;
+  min-width: 180px;
+  flex-shrink: 0;
+  align-self: stretch;
 }
 .sidebar-button {
   width: 160px;
